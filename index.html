@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de formulario</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h3 class="titulo-header">Cadastre o seu carro para vender mais rapido!</h3>
+    </header>
+    <main>
+        <div class="campo-p-principal">
+            <p class="p-principal">Formulario</p>
+        </div>
+        <div class="cabecalho-main">
+            <h1>Venda fácil o seu carro!</h1>
+            <p class="p-cabecalho">Descreva as caracteristicas e marque os opcionais que ele possui.</p>
+        </div>
+        <div class="container-principal">
+            <form>
+                <div class="formulario-controle">
+                    <label for="titulo">Digite o titulo do seu anuncio: <span class="required">*</span> </label>
+                    <input type="text" name="titulo" id="titulo" class="block" placeholder="Um titulo para anunciar o seu carro..." minlength="1" maxlength="30" required>
+                </div>
+
+                <div class="formulario-controle">
+                    <label for="preco">Digite o preço do seu veiculo: <span class="required">*</span> </label>
+                    <input type="number" name="preco" id="preco" class="block" placeholder="Informe o valor para venda." required>
+                </div>
+
+                <div class="formulario-controle">
+                    <label for="descricao">Descrição do veiculo:</label>
+                    <textarea name="descricao" id="descricao" placeholder="Descreva os detalhes do seu veiculo, por exemplo: avarias na lataria, pneus meia vida." class="block" required></textarea>
+                </div>
+
+                <div class="formulario-controle">
+                    <label for="marca">Informe a marca do seu veiculo: <span class="required">*</span> </label>
+                    <input type="text" name="marca" id="marca" class="block" placeholder="Qual fabricante do seu veiculo." minlength="1" maxlength="30" required>
+                </div>
+
+                <div class="formulario-controle">
+                    <label for="modelo">Informe o modelo do seu veiculo: <span class="required">*</span> </label>
+                    <input type="text" name="modelo" id="modelo" class="block" placeholder="Exemplo: Polo confortline 1.0 200tsi" minlength="1" maxlength="30" required>
+                </div>
+
+                <div class="formulario-controle">
+                    <label for="kilometragem">Informe a kilometragem do seu veiculo: <span class="required">*</span> </label>
+                    <input type="number" name="kilometragem" id="kilometragem" class="block" placeholder="Exemplo: 80.000" minlength="1" maxlength="30" required>
+                </div>
+
+                <div class="formulario-controle">
+                    <label for="data-de-compra">Data de compra:</label>
+                    <input type="date" name="data-de-compra" id="data-de-compra" class="block" required>
+                </div>
+
+                <div class="formulario-controle">
+                    <p class="p-opcao-cambio">Tipo de cambio: <span class="required">*</span></p>
+                    <input type="radio" name="marcha" id="manual" required>
+                    <label for="manual">Manual</label>
+
+                    <input type="radio" name="marcha" id="automatico" required>
+                    <label for="automatico">Automático</label>
+                </div>
+
+                <div class="opcionais">
+                    <p class="p-opcionais">Opcionais do veiculo: <span class="required">*</span></p>
+
+                    <ul class="lista-opcionais">
+                        <li>
+                            <input type="checkbox" name="opcionais[]" id="airbag" value="airbag">
+                            <label for="airbag">Airbag</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="opcionais[]" id="alarme" value="alarme">
+                            <label for="alarme">Alarme</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="opcionais[]" id="ac" value="ac">
+                            <label for="ac">Ar Condicionado</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="opcionais[]" id="camera-re" value="camera-re">
+                            <label for="camera-re">Camera de Ré</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="opcionais">
+
+                    <ul class="lista-opcionais">
+                        <li>
+                            <input type="checkbox" name="opcionais[]" id="assit-pista" value="assit-pista">
+                            <label for="assit-pista">Assistente de Pista</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="opcionais[]" id="keyless" value="keyless">
+                            <label for="keyless">Partida sem Chave</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="opcionais[]" id="cp" value="cp">
+                            <label for="cp">Car Play</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="opcionais[]" id="banco-couro" value="banco-couro">
+                            <label for="banco-couro">Banco de Couro</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="formulario-controle">
+                    <p class="p-fotos">Fotos do carro: <span class="required">*</span></p>
+                    <input type="file" multiple accept="image/png, image/jpg" id="images" name="images" required>
+                </div>
+
+                <div class="botoes-interacao">
+                    <button type="submit" class="botao-enviar">Enviar formulario</button>
+                    <button type="reset" class="botao-resetar">Resetar formulario</button> 
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+            <p class="p_assinatura">Desenvolvido por <br> Guilherme Silva © 2025</p>
+    </footer>
+</body>
+</html>
